@@ -298,7 +298,7 @@ Mian content starts here
 .video-container {
   display: grid;
   /* grid-template-columns: repeat(4, 1fr); */
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 18px;
   padding: 20px;
   background-color: #181818;
@@ -377,6 +377,49 @@ Mian content starts here
   margin-left: 5px;
 }
 
-.hidden-content {
-  display: none;
+/* Responsive starts here */
+@media (max-width:1200px) {
+
+  body {
+    grid-template-columns: 70px 1fr;
+  }
+
+  .header{
+    padding: 5px 10px;
+  }
+
+  .sidebar {
+    width: 70px;
+    overflow-x: hidden;
+  }
+
+  .sidebar-items {
+    padding: 0;
+  }
+
+  .sidebar-item {
+    padding: 0 20px;
+  }
+
+  .sidebar-items span {
+    display: none;
+  }
+
+  .more {
+    display: none;
+  }
+
+  .content {
+    overflow-y: hidden;
+  }
+
+  .chips-warpper {
+    max-width: calc(100vw - 70px);
+  }
+}
+
+@media (max-width:800px) {
+  .search-container{
+    display: none;
+  }
 }
